@@ -11,5 +11,37 @@
         <img src="smoothie.inv.png" alt="Smoothie Logo" class="logo">
         <h1>Smoothie Inc</h1>
     </div>
+    <div class="box">
+    <label>Choose Size</label>
+    <select id="size">
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+    </select>
+
+    <label>Choose Base</label>
+    <select id="base">
+        <option value="Milk">Milk</option>
+        <option value="Almond Milk">Almond Milk</option>
+        <option value="Oat Milk">Oat Milk</option>
+        <option value="Water">Water</option>
+    </select>
+
+    <label>Ingredients</label>
+    <div class="ingredients">
+        <label><input type="checkbox" value="Banana"> Banana</label>
+        <label><input type="checkbox" value="Strawberries"> Strawberries</label>
+        <label><input type="checkbox" value="Blueberries"> Blueberries</label>
+        <label><input type="checkbox" value="Mango"> Mango</label>
+        <label><input type="checkbox" value="Pineapple"> Pineapple</label>
+    </div>
+
+    <label>Sweetness Level</label>
+    <input type="range" id="sweet" min="1" max="5" value="3">
+
+    <button id="orderBtn" class="order-btn">Order Smoothie</button>
+</div>
+
+<script src="pg.js"></script>
 </body>
 </html>
