@@ -25,3 +25,24 @@ class Smoothie {
         `;
     }
 }
+// Button click
+document.getElementById("orderBtn").addEventListener("click", () => {
+    let size = document.getElementById("size").value;
+    let base = document.getElementById("base").value;
+    let sweet = document.getElementById("sweet").value;
+
+    let itemBoxes = document.querySelectorAll(".ingredients input");
+    let items = [];
+
+    itemBoxes.forEach(box => {
+        if (box.checked) {
+            items.push(box.value);
+        }
+    });
+
+    let smoothie = new Smoothie(size, base, items, sweet);
+
+    let output = document.getElementById("result");
+    output.innerHTML = smoothie.getDetails();
+    output.style.display = "block";
+});
